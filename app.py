@@ -21,6 +21,8 @@ if btn and user_image is not None:
 		user_selected_items = list(result[0].keys())
 		if 'dominant_race' in user_selected_items:
 			emotion_label='Race: '+str(result[0]['dominant_race']).title()
+elif btn and user_image is None:
+	st.warning('Please Check the file')
 			
 			cv2.putText(image, emotion_label, (x, y+h+110), cv2.FONT_ITALIC,1 ,(255,255,255), 2)
 	col1,col2=st.columns(2)
