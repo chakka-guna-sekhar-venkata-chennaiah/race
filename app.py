@@ -24,13 +24,5 @@ if btn and user_image is not None:
 elif btn and user_image is None:
 	st.warning('Please Check the file')
 			
-			cv2.putText(image, emotion_label, (x, y+h+110), cv2.FONT_ITALIC,1 ,(255,255,255), 2)
-	col1,col2=st.columns(2)
-	with col1:
-		st.info('Original Image')
-		st.image(user_image,use_column_width=True)
-	with col2:
-		st.info('Detected Image')
-		st.image(image, use_column_width=True,channels='BGR')
-		st.markdown(f'''<h4 align='center'>Detected Race: {result[0]['dominant_race']}</h1>''',unsafe_allow_html=True)
+			
 
